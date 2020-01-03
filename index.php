@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154926946-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154926946-1');
+</script>
+
   <meta name="google-site-verification" content="bgS02LV_k5L3NKPpLnPhqLbrCWNAZYwSvc-Vk45i2-Y" />
   <meta name="theme-color" content="#000000">
   <meta name="msapplication-navbutton-color" content="#000000">
@@ -13,207 +24,301 @@
   <style>
     .picturetitle {
       position: relative;
-      }
+    }
+
     .picturetitle h1 {
       position: absolute;
       top: 50%;
       left: 50%;
-      -ms-transform: translate(-50%,-50%);
-      -webkit-transform: translate(-50%,-50%);
-      transform: translate(-50%,-50%);
-      margin:0;
-      padding:0;
-    color:#ffffff;
-    font-family:Times New Roman;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+      font-family: Times New Roman;
       letter-spacing: 7px;
-    font-size:110%;
-      }
-    
+      font-size: 110%;
+    }
+
+    .picturetitle {
+      background: #000;
+    }
+
     .picturetitle img {
+      display: block;
       width: 100%;
-    height:250px;
-    object-fit: cover;
-      }
-    .head{
-    position:fixed;
-    background-color:black;
-    width:100%;
-    height:40px;
-    top:0px;
-    left:0px;
+      height: 250px;
+      object-fit: cover;
+      opacity: 1;
+      transition: 0.8s;
     }
-    .inner{
-    position:fixed;
-    color:white;
-    top:10px;
-    left:20px;
-    font-family:Courier New;
+
+    .picturetitle:hover img {
+      opacity: 0.6;
+      transition: 0.8s;
     }
+
+    .head {
+      position: fixed;
+      background-color: black;
+      width: 100%;
+      height: 40px;
+      top: 0px;
+      left: 0px;
+    }
+
+    .inner {
+      position: fixed;
+      color: white;
+      top: 10px;
+      left: 20px;
+      font-family: Courier New;
+    }
+
     .body {
-    text-align:center;
+      text-align: center;
     }
-    .object .picturemessage img {
-        border-radius: 50%;
-        height: 180px;
-        width: 180px;
-       position: relative;
-      transition: 0.8s ;
+
+    .error {
+      text-align: center;
+      font-size: 60px;
+      margin: 0;
+      animation-name: fadein;
+      animation-duration: 3s;
     }
-    .object .picturemessage h2 {
+
+    .object .picturemessage img,
+    .objectbig .picturemessage img {
+      border-radius: 50%;
+      height: 180px;
+      width: 180px;
+      position: relative;
+      transition: 0.8s;
+    }
+
+    .object .picturemessage h2,
+    .objectbig .picturemessage h2 {
       position: absolute;
       top: 50%;
       left: 50%;
-      -ms-transform: translate(-50%,-50%);
-      -webkit-transform: translate(-50%,-50%);
-      transform: translate(-50%,-50%);
-      margin:0;
-      padding:0;
-      color:#000000;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      color: #000000;
       border-bottom: solid 3px #000000;
-    font-family:Times New Roman;
-     letter-spacing: 10px;
-        width: 200px;
-    transition: 0.8s ;
-      }
-    .object .picturemessage {
+      font-family: Times New Roman;
+      letter-spacing: 10px;
+      width: 200px;
+      transition: 0.8s;
+    }
+
+    .object .picturemessage,
+    .objectbig .picturemessage {
       position: relative;
     }
-    .object:hover .picturemessage img{
-       opacity: 0.5; 
-    height: 190px; 
-    width: 190px; 
-    transition: 0.8s ;
+
+    .object:hover .picturemessage img,
+    .objectbig:hover .picturemessage img {
+      opacity: 0.3;
+      height: 190px;
+      width: 190px;
+      transition: 0.8s;
     }
-    .object:hover .picturemessage h2{
-     letter-spacing: 15px; 
-    width: 230px;  
-    transition: 0.8s ; 
-    font-size:120%; 
+
+    .object:hover .picturemessage h2,
+    .objectbig:hover .picturemessage h2 {
+      letter-spacing: 15px;
+      width: 230px;
+      transition: 0.8s;
+      font-size: 120%;
     }
-    .object{
-    transition: 0.8s ;
-    margin-left:auto;
-    margin-right:auto;
-    height: 190px;
-    width: 30%;
-    min-width: 190px;
-    max-width: 300px;
+
+    .object,
+    .objectbig {
+      transition: 0.8s;
+      margin-left: auto;
+      margin-right: auto;
+      height: 190px;
+      width: 30%;
+      min-width: 190px;
+      max-width: 300px;
+      animation-name: fadein;
+      animation-duration: 3s;
     }
-    .object .text{
-    transition: 0.8s ;
-    height: -10px;
-    font-size:0%;
-    opacity: 0.0; 
+
+    .object .text,
+    .objectbig .text {
+      transition: 0.8s;
+      height: -10px;
+      font-size: 0%;
+      opacity: 0.0;
+      font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium";
     }
-    .object:hover{
-    transition: 0.8s; 
-    height: 430px; 
-    width: 30%; 
-    min-width: 190px; 
-    max-width: 300px;
+
+    .object:hover {
+      height: 280px;
+      transition: 0.8s;
+      width: 30%;
+      min-width: 190px;
+      max-width: 300px;
     }
-    .object:hover .text{
-    transition: 0.8s;
-    height: 150px;
-    font-size:100%;
-    width: 100%;
-    opacity: 1.0; 
+
+    .objectbig:hover {
+      height: 450px;
+      transition: 0.8s;
+      width: 30%;
+      min-width: 190px;
+      max-width: 300px;
     }
-    .object:hover .text .btn p{
-    transition: 0.3s ;
-    font-size:100%;
+
+    .object:hover .text,
+    .objectbig:hover .text {
+      transition: 0.8s;
+      height: 150px;
+      font-size: 100%;
+      width: 100%;
+      opacity: 1.0;
     }
-    .btn p{
-    color:black;
-    transition: 0.3s ;
-    font-size:0%;
+
+    .object:hover .text .btn p,
+    .objectbig:hover .text .btn p {
+      transition: 0.3s;
+      font-size: 100%;
     }
-    .btn{
-    text-decoration: none;
+
+    .btn p {
+      color: black;
+      transition: 0.3s;
+      font-size: 0%;
     }
+
+    .btn {
+      text-decoration: none;
+    }
+
     .btn p:hover {
-        transition: 0.3s ;
-        position: relative;
-        display: inline-block;
-        padding: 0.25em 0.5em;
-        text-decoration: none;
-        color:blue;
-        background: #ffffff;
-        border: solid 1px #0f9ada;
-        border-radius: 4px;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-        text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      position: relative;
+      display: inline-block;
+      padding: 0.25em 0.5em;
+      text-decoration: none;
+      color: blue;
+      background: #ffffff;
+      border: solid 1px #0f9ada;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
     }
-    .btn p:hover{
-    font-size:125%;
-    transition: 0.3s ;
-    margin-top:auto;
-    margin-bottom:auto;
+
+    .btn p:hover {
+      font-size: 125%;
+      transition: 0.3s;
+      margin-top: auto;
+      margin-bottom: auto;
     }
+
     .fade {
-        font-size: 12px;
-        font-weight: bold;
-        animation-name: fadein;
-        animation-duration: 10s;
-    text-align:center;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+      animation-name: fadein;
+      animation-duration: 3s;
     }
+
     @keyframes fadein {
-    from {
+      from {
         opacity: 0;
         transform: translateY(40px);
-    }
-    to {
+      }
+
+      to {
         opacity: 1;
         transform: translateY(0);
+      }
     }
-    }
-    
-    .margin{
+
+    .margin {
       margin-bottom: 100px;
     }
-    .margin2{
+
+    .margin2 {
       margin-bottom: 10px;
     }
-    
-     .blinking{
-        -webkit-animation:blink 1.5s ease-in-out infinite alternate;
-        -moz-animation:blink 1.5s ease-in-out infinite alternate;
-        animation:blink 1.5s ease-in-out infinite alternate;
+
+    .blinking {
+      -webkit-animation: blink 1.5s ease-in-out infinite alternate;
+      -moz-animation: blink 1.5s ease-in-out infinite alternate;
+      animation: blink 1.5s ease-in-out infinite alternate;
     }
-    @-webkit-keyframes blink{
-        0% {opacity:0;}
-        100% {opacity:1;}
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
-    @-moz-keyframes blink{
-        0% {opacity:0;}
-        100% {opacity:1;}
+
+    @-moz-keyframes blink {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
-    @keyframes blink{
-        0% {opacity:0;}
-        100% {opacity:1;}
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="picturetitle"><img src="/indexpicture/headpicture.jpg">
     <h1>yuki0311.com</h1>
   </div>
   <div class="margin2"></div>
   <p class="fade">yuki0311.comの運営紹介サイトです。</p>
-  <div class="margin"></div>
+  <?php
+  if($_GET[error] != null){
+      echo "<p class=\"error\">";
+      echo $_GET[error];
+      echo "</p>";
+  }else{
+  echo "<div class=\"margin\"></div>";
+  }
+?>
   <div class="body">
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage1.jpg">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage3.jpg">
         <h2>pikapika</h2>
       </div>
       <div class="text">
-        <p>LINEで使えるピカピカbotシリーズです。ピカピカチャットやピカピカグループやピカピカ保護等があります。アカウント規制の為ピカピカグループ6しか動いてません。</p>
+        <p>LINEで使えるピカピカbotです。</p>
         <a href="https://line.me/R/ti/p/%40736efusc" class="btn">
           <p>>友達追加</p>
+        </a>
+        <a href="https://yuki0311.com/pikapika/" class="btn">
+          <p>>サイトに飛ぶ</p>
         </a>
       </div>
     </div>
     <div class="margin"></div>
+    <!--
     <div class="object">
       <div class="picturemessage"> <img src="/indexpicture/headmessage2.jpg">
         <h2>diffusion</h2>
@@ -226,7 +331,8 @@
       </div>
     </div>
     <div class="margin"></div>
-    <div class="object">
+  -->
+    <div class="objectbig">
       <div class="picturemessage"> <img src="/indexpicture/headmessage7.png">
         <h2>くそツールまとめ</h2>
       </div>
@@ -278,7 +384,7 @@
       </div>
     </div>
     <div class="margin"></div>
-    <div class="object">
+    <div class="objectbig">
       <div class="picturemessage"> <img src="/indexpicture/headmessage8.png">
         <h2>GitHub</h2>
       </div>
@@ -318,11 +424,12 @@
   <div class="inner">yuki0311.com
     <?php
 $error = $_GET[error];
-if($error != null){
-echo "<span class=\"blinking\">";
-echo $error."error";
-echo "</span>";
+if ($error != null) {
+    echo "<span class=\"blinking\">";
+    echo $error."error";
+    echo "</span>";
 }
 ?> </div>
 </body>
+
 </html>
