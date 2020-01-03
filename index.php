@@ -2,15 +2,7 @@
 <html>
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154926946-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-154926946-1');
-</script>
 
   <meta name="google-site-verification" content="bgS02LV_k5L3NKPpLnPhqLbrCWNAZYwSvc-Vk45i2-Y" />
   <meta name="theme-color" content="#000000">
@@ -304,7 +296,7 @@
 ?>
   <div class="body">
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage3.jpg">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage1.jpg">
         <h2>pikapika</h2>
       </div>
       <div class="text">
@@ -333,7 +325,7 @@
     <div class="margin"></div>
   -->
     <div class="objectbig">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage7.png">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage3.png">
         <h2>くそツールまとめ</h2>
       </div>
       <div class="text">
@@ -349,7 +341,7 @@
     </div>
     <div class="margin"></div>
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage5.jpg">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage4.jpg">
         <h2>math</h2>
       </div>
       <div class="text">
@@ -373,7 +365,7 @@
     </div>
     <div class="margin"></div>
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage6.jpg">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage5.jpg">
         <h2>taiko</h2>
       </div>
       <div class="text">
@@ -385,7 +377,7 @@
     </div>
     <div class="margin"></div>
     <div class="objectbig">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage8.png">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage6.png">
         <h2>GitHub</h2>
       </div>
       <div class="text">
@@ -397,7 +389,7 @@
     </div>
     <div class="margin"></div>
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage3.jpg">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage7.jpg">
         <h2>twitter</h2>
       </div>
       <div class="text">
@@ -409,7 +401,7 @@
     </div>
     <div class="margin"></div>
     <div class="object">
-      <div class="picturemessage"> <img src="/indexpicture/headmessage4.png">
+      <div class="picturemessage"> <img src="/indexpicture/headmessage8.png">
         <h2>LINE</h2>
       </div>
       <div class="text">
